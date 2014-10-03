@@ -1,53 +1,46 @@
 <?php
+/**
+ * The main template file.
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Gym 101 Fitness
+ */
 
-//if(strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone') || strpos($_SERVER['HTTP_USER_AGENT'], 'iPod')) {
-//	if (isset($_REQUEST['page'])) {
-//		if($_REQUEST['page'] !="") {
-//			if(file_exists("pages/".$_REQUEST['page'].".php")){
-//				 ob_start();
-//				 include("pages/".$_REQUEST['page'].".php");
-//				 $page_content = ob_get_clean();
-//			}else{
-//				if (file_exists($_REQUEST['page'].".php")) {
-//					ob_start();
-//					include("pages/".$_REQUEST['page'].".php");
-//					$page_content = ob_get_clean();
-//				}
-//			}
-//		}else{
-//			echo "<center>Page:".$_REQUEST['page']." does not exist! Please check the url and try again!</center>"; 
-//		}
-//	}else{
-//		header("Location: index.php?page=iphone");
-//	}
-//	include("pages/");
-//}else{
-	if (isset($_REQUEST['page'])) {
-		if($_REQUEST['page'] !="") {
-			if(file_exists("pages/".$_REQUEST['page'].".php")){
-				ob_start();
-				include("pages/".$_REQUEST['page'].".php");
-				$page_content = ob_get_clean();
-			}else{
-				if (file_exists($_REQUEST['page'].".php")) {
-					ob_start();
-					include("pages/".$_REQUEST['page'].".php");
-					$page_content = ob_get_clean();
-				}
-			}
-		}else{
-			echo "<center>Page:".$_REQUEST['page']." does not exist! Please check the url and try again!</center>"; 
-		}
-	}else{
-	header("Location: index.php?page=home");
-	}
-//	if($_REQUEST['page'] === "home") {
-//		$css = "sub.css";
-//	}else {
-//		$css = "subpages.css";
-//	}
+get_header(); ?>
 
-$page = $_REQUEST['page'];
-include "pages/tplmain.php";
-//}
-?>
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<?php if ( have_posts() ) : ?>
+
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+
+				<?php
+					/* Include the Post-Format-specific template for the content.
+					 * If you want to override this in a child theme, then include a file
+					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+					 */
+					get_template_part( 'content', get_post_format() );
+				?>
+
+			<?php endwhile; ?>
+
+			<?php gym_101_fitness_paging_nav(); ?>
+
+		<?php else : ?>
+
+			<?php get_template_part( 'content', 'none' ); ?>
+
+		<?php endif; ?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>

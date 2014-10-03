@@ -10,12 +10,14 @@ html, body, div, span, form, table, a, ul, li {
 a, img {
 	border:none;
 }
+html, body {
+	background: #000;
+}
 body {
 	color:#fff;
 	font-size:11pt;
 	font-family: "Calibri", Arial, Helvetica, sans-serif;
-	background: #000 url(../images/bg01.jpg) repeat-x;
-	/*line-height:1.5em;*/
+	background: #000 url(images/bg01.jpg) repeat-x !important;
 }
 
 
@@ -32,24 +34,24 @@ ul li {
 	list-style-type:none;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: Helvetica, Arial Black, serif;
-	font-style: italic;
-	font-weight:bold;
+	font-family: Helvetica, Arial Black, serif !important;
+	font-style: italic !important;
+	font-weight: bold !important;
 }
 h1 {
-	/*border-bottom:1px solid #CCC;*/
-	padding-bottom:20px;
+	border-bottom: 1px solid #CCC;
+	padding-bottom: 20px !important;
 	font-style: italic;
 }
 h1, h2 {
 	/*text-shadow: #666 2px 2px 2px;*/
 }
 h3 {
-	font-family: Geneva;
+	font-family: Geneva !important;
 	font-weight: bold;
 	font-size:150%;
 	text-transform:uppercase;
-	text-align:center;
+	/*text-align:center;*/
 	/*text-shadow:#CCC 1px 1px 1px;*/
 }
 h4 {
@@ -59,8 +61,8 @@ h4 {
 	font-weight:normal;
 }
 h5 {
-	font-weight: bold;
-	font-size:14pt;
+	font-weight: bold !important;
+	font-size: 14pt !important;
 }
 
 .bold {
@@ -89,7 +91,7 @@ blockquote {
 }
 div.hr {
 	height: 2px;
-	background: url(../images/divas/hr.gif) no-repeat scroll center;
+	background: url(images/divas/hr.gif) no-repeat scroll center;
 }
 div.hr hr {
 	display: none;
@@ -121,7 +123,7 @@ strong {
 #container {
 	text-align:center;
 	margin: 0 auto;
-	width:960px;
+	/*width:960px;*/
 	min-height:550px;
 	padding-bottom:50px;
 	background:#000;
@@ -132,137 +134,124 @@ strong {
 	background:#000;
 }
 #logo {
-	 float:left; 
-	 height:120px;
-	 width:435px;
+	 /*float:left; */
+	 /*height:120px;*/
+	 /*width:435px;*/
 }
 #motto {
-	height:50px;
-	width:500px;
-	float:right;
-	padding-top:25px;
-	padding-right:15px;
+	color: #fff;
+	font-size: 2em;
+	text-align: center;
+	padding-top: 10px;
+	/*padding-right:15px;*/
 }
-
+#motto .green {
+	color: limegreen;
+}
+#motto .orange {
+	font-style: italic;
+	color: orange;
+}
 #FB {
 	text-align:right;
-	padding-right:20px;
-	padding-top:10px;
+	/*padding-right:20px;*/
+	/*padding-top: 10px;*/
 }
-#menu1, #menu1 a {
+.main-navigation, .main-navigation a {
 	height:50px;
 }
-#menu1 a, #menu1 ul li {
+.main-navigation a, .main-navigation ul li {
 	display:block;
 }
-#menu1 {
+.main-navigation {
 	width:100%;
 	height: 50px;
 	text-align:center;
 	font-size:12px;
 	text-transform: uppercase;
-	background: #ff670f url(../images/menu_slice.gif) repeat-x;
+	background: #ff670f url(images/menu_slice.gif) repeat-x;
 	border-radius: 10px;
 	font-family: Verdana, Geneva, sans-serif;
 	font-weight: bold;
 }
-.large {
-	font-size:10px;
-	width: 130px !important;
+.main-navigation a, a:visited {
+	color: #fff !important; 
 }
-#menu1 a, a:visited {
-	color:#fff; 
-}
-#menu1 a:hover {
+.main-navigation a:hover {
 	color:#060;
 	font-weight: bold;
 }
-#menu1 ul {
+.main-navigation ul {
 	list-style-type: none;
 	width:100%;
 }
 
-#menu1 ul li {
-	float:left;
-	height:40px;
-	width:96px;
-	padding:5px 7px;
+.main-navigation ul li {
+	float: left;
+	height: 40px;
+	width: 14.28571428571429%;
+	padding: 5px 7px;
 	display: inline;
 	line-height: 15px;
+	background: url(images/menu_divider.gif) no-repeat right;
 }
-.nav {
-	background: url(../images/menu_divider.gif) no-repeat right;
+.main-navigation ul li a {
+	margin-top: 12px;
 }
-.first a {
-	margin-top:12px !important;
-}
-.nav a {
+.main-navigation ul li:nth-child(2) a {
 	margin-top: 5px;
+	font-size: 10px;
 }
-.nav_last a {
+.main-navigation ul li:nth-child(4) a,
+.main-navigation ul li:nth-child(5) a {
 	margin-top: 5px;
+	/*font-size: 10px;*/
 }
-.nav_push a {
-	margin-top:11px;
+.main-navigation ul li:last-child {
+	background: none;
 }
 
-#wrap {
-	width:960px;
-	height:auto;
-	min-height:400px;
-	clear:both;
-}
 
-#grabber {
-	width: 470px;
-	height:200px;
-	margin: 0 0 0 40px;
-}
-#mainContent {
-	width:920px;
-	height:100%;
-	margin: 0 auto;
+
+
+
+.site-content {
 	background:#1b1b1b;
 	color:#eee;
 	padding:40px 20px 20px 20px;
 	text-align:left;
-	overflow: auto;
 }
-#leftColumn {
-	float:left;
-	width:390px;
-	margin: 10px;
-	/*padding-right:10px;*/
-	/*padding-left:10px;*/
-}
-#leftColumn div {
+
+#whoweare {
 	padding-bottom:50px;
 }
-#rightColumn {
-	width:440px;
-	float:left;
-	padding-left:20px;
+
+#whoweare h3 {
+	padding: 2em 0 2em 5em;
 }
+
+#whoweare img {
+	float:left;
+	padding-right:15px;
+	padding-bottom:5px;
+}
+
 #gymphoto {
-	margin-left:60px;
+	margin-left: 60px;
 }
-#rightColumn div {
-	padding-bottom:50px;
+
+#animation {
+	margin-left: 40px;
+	padding-bottom: 50px;
 }
 #welcome {
 	padding-bottom:10px;
 }
-#footerwrap {
+footer {
 	background:#000;
-	clear:both;
-	/*height:20px;*/
 	width:100%;
-	margin-bottom:-20px;
-}
-#footer {
-	width:950px;
 	text-align:left;
-	margin:0 auto;
+	margin: 5em 0;
 }
 #footerdata {
 	float:right;
@@ -281,33 +270,33 @@ strong {
 	margin-right:-100px;
 	padding-top:25px;
 }
-#footer #menu2 {
+#menu2 {
 	font-size: 90%;	
 	padding-left: 50px;
 	float:left;
 	width:500px;
 }
-#footer #menu2 ul {
+#menu2 ul {
 	list-style-type: none;
 	float:left;
 	margin-top:15px;
 	padding: 0 30px 0 0;
 	border-left: 1px solid #929292;
 }
-#footer #menu2 ul li {
+#menu2 ul li {
 	padding-left: 5px;
 }
-#footer #menu2 a, a:visited {
+#menu2 a, a:visited {
 	color:#ccc;
 	text-decoration:none;
 	font-size: 90%;
 }
-#footer #menu2 a:hover {
+#menu2 a:hover {
 	color:#090;
 }
 #henderson h5 {
 	font-style: italic;
-	text-align:center;
-	font-family:"Times New Roman", Times, serif;
+	text-align: left;
+	font-family:"Times New Roman", Times, serif !important;
 }
 
