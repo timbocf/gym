@@ -97,33 +97,29 @@ div.hr hr {
 	display: none;
 }
 
-/*.orange {color: #d45c14;}*/
 .orange {color:#ff8c01;}
 .green {color:#098d10;}
 .red {color:red;}
 .blue {color:blue;}
 .small {font-size:90%;}
 .right {text-align:right;}
+
 strong {
 	font-weight:bold;
 	font-size: 110%;
 	text-transform: uppercase;
 }
-.margin-bottom {
-	margin-bottom:20px;
-	border-bottom:1px solid #999;
-}
+
 .orange_bg {
 	background-color: #FFB16C;
 }
 
 
 
-
+/** HEADER **/
 #container {
 	text-align:center;
 	margin: 0 auto;
-	/*width:960px;*/
 	min-height:550px;
 	padding-bottom:50px;
 	background:#000;
@@ -133,30 +129,21 @@ strong {
 	height:130px;
 	background:#000;
 }
-#logo {
-	 /*float:left; */
-	 /*height:120px;*/
-	 /*width:435px;*/
-}
+
 #motto {
 	color: #fff;
 	font-size: 2em;
 	text-align: center;
 	padding-top: 10px;
-	/*padding-right:15px;*/
-}
-#motto .green {
-	color: limegreen;
 }
 #motto .orange {
 	font-style: italic;
-	color: orange;
 }
 #FB {
 	text-align:right;
-	/*padding-right:20px;*/
-	/*padding-top: 10px;*/
 }
+
+/** NAVIGATION **/
 .main-navigation, .main-navigation a {
 	height:50px;
 }
@@ -214,7 +201,7 @@ strong {
 
 
 
-
+/** MAIN **/
 .site-content {
 	background:#1b1b1b;
 	color:#eee;
@@ -247,6 +234,15 @@ strong {
 #welcome {
 	padding-bottom:10px;
 }
+
+
+/** TRAINING PAGE **/
+.trainer {
+	margin-bottom:20px;
+}
+
+
+/**  FOOTER  **/
 footer {
 	background:#000;
 	width:100%;
