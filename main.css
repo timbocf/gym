@@ -128,6 +128,7 @@ strong {
 	width:100%;
 	height:130px;
 	background:#000;
+	margin-top: 1em;
 }
 
 #motto {
@@ -235,6 +236,34 @@ strong {
 	padding-bottom:10px;
 }
 
+/** CLASS SCHEDULE PAGE **/
+.wcs3-schedule-wrapper table th {
+	color: #333 !important;
+	text-align: center;
+	line-height: 2em;
+}
+.wcs3-schedule-wrapper td {
+	padding: 1em !important;
+	line-height: 2em;
+}
+#classdesc {
+	text-align:justify;
+	/*padding: 20px 50px;*/
+	/*width:500px;*/
+	margin-top:50px;
+	padding:20px;
+	background:#efefef;
+	color:#393939;
+}
+#classdesc ul {
+	list-style-type: none;
+}
+#classdesc ul li {
+	padding-bottom: 20px;
+	text-indent: -5em; 
+	padding-left: 5em;
+}
+
 
 /** TRAINING PAGE **/
 .trainer {
@@ -288,7 +317,6 @@ strong {
 }
 
 /** CONTACT US PAGE **/
-/* CSS Document */
 
 #leftColumn2 {
 	text-align:left;
