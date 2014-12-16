@@ -60,8 +60,21 @@
 			</div><!-- END HEADER DIV -->
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'gym-101-fitness' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".nav-main-wrap">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<div class="nav-main-wrap collapse navbar-collapse">
+					<?php 
+						$defaults = array(
+							'menu_class'=> 'nav navbar-nav', 
+							'theme_location' => 'primary'
+						);
+						wp_nav_menu( $defaults );
+					?>
+				</div>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
 

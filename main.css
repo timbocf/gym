@@ -126,7 +126,7 @@ strong {
 }
 #header {
 	width:100%;
-	height:130px;
+	min-height:130px;
 	background:#000;
 	margin-top: 1em;
 }
@@ -145,58 +145,62 @@ strong {
 }
 
 /** NAVIGATION **/
-.main-navigation, .main-navigation a {
-	height:50px;
-}
-.main-navigation a, .main-navigation ul li {
-	display:block;
-}
-.main-navigation {
-	width:100%;
-	height: 50px;
-	text-align:center;
-	font-size:12px;
-	text-transform: uppercase;
-	background: #ff670f url(images/menu_slice.gif) repeat-x;
-	border-radius: 10px;
-	font-family: Verdana, Geneva, sans-serif;
-	font-weight: bold;
-}
-.main-navigation a, a:visited {
-	color: #fff !important; 
-}
-.main-navigation a:hover {
-	color:#060;
-	font-weight: bold;
-}
-.main-navigation ul {
-	list-style-type: none;
-	width:100%;
-}
 
-.main-navigation ul li {
-	float: left;
-	height: 40px;
-	width: 14.28571428571429%;
-	padding: 5px 7px;
-	display: inline;
-	line-height: 15px;
-	background: url(images/menu_divider.gif) no-repeat right;
-}
-.main-navigation ul li a {
-	margin-top: 12px;
-}
-.main-navigation ul li:nth-child(2) a {
-	margin-top: 5px;
-	font-size: 10px;
-}
-.main-navigation ul li:nth-child(4) a,
-.main-navigation ul li:nth-child(5) a {
-	margin-top: 5px;
-	/*font-size: 10px;*/
-}
-.main-navigation ul li:last-child {
-	background: none;
+@media screen and (min-width: 1024px) {
+	.main-navigation, .main-navigation a {
+		/*height:50px;*/
+	}
+	.main-navigation a, .main-navigation ul li {
+		display:block;
+	}
+	.main-navigation {
+		width:100%;
+		height: 50px;
+		text-align:center;
+		font-size:12px;
+		text-transform: uppercase;
+		background: #ff670f url(images/menu_slice.gif) repeat-x;
+		border-radius: 10px;
+		font-family: Verdana, Geneva, sans-serif;
+		font-weight: bold;
+	}
+	.main-navigation a, a:visited {
+		color: #fff !important; 
+	}
+	.main-navigation a:hover {
+		color: #060 !important;
+		font-weight: bold;
+		background: transparent !important;
+	}
+	.main-navigation ul {
+		list-style-type: none;
+		width:100%;
+	}
+
+	.main-navigation ul li {
+		float: left;
+		height: 40px;
+		width: 14.28571428571429%;
+		/*padding: 5px 7px;*/
+		display: inline;
+		/*line-height: 15px;*/
+		background: url(images/menu_divider.gif) no-repeat right;
+	}
+	.main-navigation ul li a {
+		/*margin-top: 12px;*/
+	}
+	.main-navigation ul li:nth-child(2) a {
+		margin-top: -10px;
+		font-size: 10px;
+	}
+	.main-navigation ul li:nth-child(4) a,
+	.main-navigation ul li:nth-child(5) a {
+		margin-top: -10px;
+		/*font-size: 10px;*/
+	}
+	.main-navigation ul li:last-child {
+		background: none;
+	}
 }
 
 
@@ -404,3 +408,35 @@ footer {
 	font-family:"Times New Roman", Times, serif !important;
 }
 
+/** RESPONSIVE **/
+@media screen and (max-width: 1023px) {
+	.main-navigation ul li {
+		width: 100%;
+		background: #333;
+	}
+	.navbar-toggle .icon-bar {
+		background: #ffffff !important;
+	}
+	#whoweare h3 {
+		padding: 0;
+	}
+	.site-content {
+		padding: 0;
+	}
+	#animation {
+		display: none;
+	}
+	#gymphoto {
+		margin-left: 0;
+	}
+	#menu2 ul {
+		float: none;
+	}
+	#menu2 ul li {
+		height: 50px;
+	}
+	.svcwrap {
+		min-height: 170px;
+		height: auto;
+	}
+}
