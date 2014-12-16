@@ -94,9 +94,9 @@ add_action( 'widgets_init', 'gym_101_fitness_widgets_init' );
 function gym_101_fitness_scripts() {
 	wp_enqueue_style( 'gym-101-fitness-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'main', get_template_directory_uri() . '/main.css', '20141002', true );
-
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css', '20141002', true );
+
+	wp_enqueue_style( 'main', get_template_directory_uri() . '/main.css', '20141002', true );
 
 	wp_enqueue_script( 'gym-101-fitness-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

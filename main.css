@@ -179,24 +179,29 @@ strong {
 
 	.main-navigation ul li {
 		float: left;
-		height: 40px;
-		width: 14.28571428571429%;
-		/*padding: 5px 7px;*/
+		/*height: 40px;*/
+		width: 12.5%;
 		display: inline;
-		/*line-height: 15px;*/
-		background: url(images/menu_divider.gif) no-repeat right;
+		background: url(images/menu_divider.gif) no-repeat 100% 0;
 	}
-	.main-navigation ul li a {
-		/*margin-top: 12px;*/
+	.main-navigation ul li:nth-child(1) {
+		width: 10%;		
+	}
+	.main-navigation ul li:nth-child(2) {
+		width: 15%;
 	}
 	.main-navigation ul li:nth-child(2) a {
 		margin-top: -10px;
 		font-size: 10px;
 	}
-	.main-navigation ul li:nth-child(4) a,
-	.main-navigation ul li:nth-child(5) a {
+	.main-navigation ul li:nth-child(2) a,
+	.main-navigation ul li:nth-child(3) a {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.main-navigation ul li:nth-child(5) a,
+	.main-navigation ul li:nth-child(6) a {
 		margin-top: -10px;
-		/*font-size: 10px;*/
 	}
 	.main-navigation ul li:last-child {
 		background: none;
@@ -218,8 +223,10 @@ strong {
 	padding-bottom:50px;
 }
 
-#whoweare h3 {
-	padding: 2em 0 2em 5em;
+#whoweare h2 {
+	padding: 1em 0 1em 5em;
+	font-weight: 900 !important;
+	text-transform: uppercase !important;
 }
 
 #whoweare img {
@@ -238,6 +245,19 @@ strong {
 }
 #welcome {
 	padding-bottom:10px;
+}
+#welcome h1 {
+	border: 0;
+	background-color: #F78914;
+	color: #ffffff;
+	font-family: 'Open Sans', sans-serif !important;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-style: normal !important;
+	font-size: 3em;
+	text-align: center;
+	padding-top: 0.5em;
+	text-shadow: #BA4D09 2px 2px 2px;
 }
 
 /** CLASS SCHEDULE PAGE **/
@@ -382,7 +402,7 @@ footer {
 	font-size: 90%;	
 	padding-left: 50px;
 	float:left;
-	width:500px;
+	/*width:500px;*/
 }
 #menu2 ul {
 	list-style-type: none;
@@ -417,7 +437,7 @@ footer {
 	.navbar-toggle .icon-bar {
 		background: #ffffff !important;
 	}
-	#whoweare h3 {
+	#whoweare h2 {
 		padding: 0;
 	}
 	.site-content {
@@ -438,5 +458,9 @@ footer {
 	.svcwrap {
 		min-height: 170px;
 		height: auto;
+	}
+	#rightColumn2 {
+		padding: 1em;
+		margin-top: 1em;
 	}
 }

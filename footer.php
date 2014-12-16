@@ -20,11 +20,12 @@
 	                <li><a href="/class-schedule/">Class Schedule</a></li>
 	            </ul>
 	            <ul>
+	            	<li><a href="/testimonies/">Testimonies</a></li>
 	                <li><a href="/service-facilities/">Service &amp; Facilities</a></li>
 	                <li><a href="/metallic-sol-tanning/">Metallic Sol Tanning</a></li>
-	                <li><a href="/training-pit/">The Training Pit</a></li>
 	            </ul>
 	            <ul>
+	            	<li><a href="/training-pit/">The Training Pit</a></li>
 	                <li><a href="/contact-us/">Contact Us</a></li>
 	            </ul>
 	        </div><!-- #menu2 -->
